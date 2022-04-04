@@ -5,6 +5,7 @@ const App = () => {
   return (
     <View style={styles.appContainer}>
       <Text style={styles.appText}>App Screen</Text>
+      <Text style={styles.secondText}>by Mindinventory</Text>
     </View>
   )
 }
@@ -18,8 +19,14 @@ const styles = StyleSheet.create({
   },
   appText: {
     textAlign: 'center',
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: 'bold',
     color: '#000'
+  },
+  secondText: {
+    textAlign: 'center',
+    fontSize: 12,
+    fontWeight: 'normal',
+    color: '#aaa'
   }
 })

@@ -2,7 +2,7 @@
     "name": "mindinventoryboilerplate",
     "version": "0.0.5",
     "description": "React Native Template",
-    "repository": "git@github.com:ankitpmi/mindinventory-boilerplate.git",
+    "repository": "https://github.com/ankitpmi/mindinventory-boilerplate.git",
     "author": "Mindinventory",
     "license": "MIT"
   }
