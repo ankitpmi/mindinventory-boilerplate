@@ -1,0 +1,1 @@
+export const miLogoImg = require('./images/mi_logo_img.png');
