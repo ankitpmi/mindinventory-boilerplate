@@ -1,7 +1,7 @@
 import React from 'react';
-import {View, Image, TouchableOpacity} from 'react-native';
+import {View, Image} from 'react-native';
 import {miLogoImg} from 'app-assets';
-import {AppText} from 'app-components';
+import {AppText, AppButton} from 'app-components';
 import {RootStackParams, RouteNames} from 'app-navigation';
 import styles from './styles';
 import {RouteProp, useNavigation} from '@react-navigation/native';
@@ -26,11 +26,11 @@ const HomeScreen: React.FC<Props> = () => {
   return (
     <View style={styles.appContainer}>
       <Image source={miLogoImg} resizeMode="contain" style={styles.logo} />
-      <TouchableOpacity onPress={onPressButton} style={styles.button}>
+      <AppButton onPress={onPressButton} style={styles.button}>
         <AppText preset="bold" style={styles.btnTxt}>
           Go to DetailScreen
         </AppText>
-      </TouchableOpacity>
+      </AppButton>
       <AppText>
         Created by <AppText preset="bold">Mindinventory</AppText>
       </AppText>
