@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {palette} from 'app-constants';
 
 const styles = StyleSheet.create({
   appContainer: {
@@ -27,6 +28,11 @@ const styles = StyleSheet.create({
     borderRadius: 13,
     borderWidth: 1,
     borderColor: '#ccc',
+    backgroundColor: palette.redPrimary,
+  },
+  btnTxt: {
+    color: palette.white,
+    fontWeight: 'bold',
   },
 });
 

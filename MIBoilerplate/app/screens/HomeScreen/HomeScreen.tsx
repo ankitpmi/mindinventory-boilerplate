@@ -26,7 +26,7 @@ const HomeScreen: React.FC<Props> = () => {
     <View style={styles.appContainer}>
       <Image source={miLogoImg} resizeMode="contain" style={styles.logo} />
       <TouchableOpacity onPress={onPressButton} style={styles.button}>
-        <Text>Go to DetailScreen</Text>
+        <Text style={styles.btnTxt}>Go to DetailScreen</Text>
       </TouchableOpacity>
       <Text style={styles.secondText}>
         Created by <Text style={styles.boldText}>Mindinventory</Text>
