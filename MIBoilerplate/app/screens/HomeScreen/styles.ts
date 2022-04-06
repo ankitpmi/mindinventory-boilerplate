@@ -8,14 +8,6 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     alignItems: 'center',
   },
-  secondText: {
-    fontSize: 12,
-    fontWeight: 'normal',
-    color: '#aaa',
-  },
-  boldText: {
-    fontWeight: 'bold',
-  },
   logo: {
     height: 100,
     width: 300,
@@ -32,7 +24,6 @@ const styles = StyleSheet.create({
   },
   btnTxt: {
     color: palette.white,
-    fontWeight: 'bold',
   },
 });
 

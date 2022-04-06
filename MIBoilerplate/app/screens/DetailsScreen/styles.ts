@@ -7,9 +7,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   boldText: {
-    fontWeight: 'bold',
     fontSize: 18,
-    textAlign: 'center',
   },
   button: {
     width: 200,
