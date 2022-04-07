@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {palette} from 'app-constants';
 
 const styles = StyleSheet.create({
   appContainer: {
@@ -7,14 +8,6 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     alignItems: 'center',
   },
-  secondText: {
-    fontSize: 12,
-    fontWeight: 'normal',
-    color: '#aaa',
-  },
-  boldText: {
-    fontWeight: 'bold',
-  },
   logo: {
     height: 100,
     width: 300,
@@ -22,11 +15,15 @@ const styles = StyleSheet.create({
   button: {
     width: 200,
     height: 50,
-    justifyContent: 'center',
-    alignItems: 'center',
+    // justifyContent: 'center',
+    // alignItems: 'center',
     borderRadius: 13,
     borderWidth: 1,
     borderColor: '#ccc',
+    backgroundColor: palette.redPrimary,
+  },
+  btnTxt: {
+    color: palette.white,
   },
 });
 
