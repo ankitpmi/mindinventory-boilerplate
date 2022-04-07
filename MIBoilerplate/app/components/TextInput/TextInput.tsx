@@ -14,9 +14,7 @@ const TextInput: React.FC<Props> = ({
   const inputStyle = [inputPresets[preset], props.style];
 
   return (
-    // <View>
     <RNTextInput {...props} placeholder={placeholder} style={inputStyle} />
-    // </View>
   );
 };
 
