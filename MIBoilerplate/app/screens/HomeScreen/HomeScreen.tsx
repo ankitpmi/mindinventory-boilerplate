@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Image} from 'react-native';
 import {miLogoImg} from 'app-assets';
-import {AppText, AppButton} from 'app-components';
+import {AppText, AppButton, TextInput} from 'app-components';
 import {RootStackParams, RouteNames} from 'app-navigation';
 import styles from './styles';
 import {RouteProp, useNavigation} from '@react-navigation/native';
@@ -31,6 +31,7 @@ const HomeScreen: React.FC<Props> = () => {
           Go to DetailScreen
         </AppText>
       </AppButton>
+      <TextInput value="" onChangeText={val => console.log(val)} />
       <AppText>
         Created by <AppText preset="bold">Mindinventory</AppText>
       </AppText>
