@@ -3,9 +3,10 @@ import {View, Image} from 'react-native';
 import {miLogoImg} from 'app-assets';
 import {AppText, AppButton} from 'app-components';
 import {RootStackParams, RouteNames} from 'app-navigation';
-import styles from './styles';
 import {RouteProp, useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import styles from './styles';
+import {useHomeScreen} from './useHomeScreen';
 
 export type HomeScreenNavigationProps = NativeStackNavigationProp<
   RootStackParams,
@@ -22,6 +23,9 @@ const HomeScreen: React.FC<Props> = () => {
   const onPressButton = () => {
     navigation.navigate(RouteNames.DetailsScreen);
   };
+
+  const {postData} = useHomeScreen();
+  console.log('postData-2 >>> ', postData);
 
   return (
     <View style={styles.appContainer}>

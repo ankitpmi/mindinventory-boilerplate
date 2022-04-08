@@ -11,6 +11,7 @@ module.exports = {
           'app-navigation': './app/navigation/index.ts',
           'app-constants': './app/constants/index.ts',
           'app-components': './app/components/index.ts',
+          'app-services': './app/services/index.ts',
         },
       },
     ],
