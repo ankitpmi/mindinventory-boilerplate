@@ -1,5 +1,6 @@
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View} from 'react-native';
+import {AppButton, AppText} from 'app-components';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {RouteProp, useNavigation} from '@react-navigation/native';
 import type {RootStackParams} from 'app-navigation';
@@ -26,10 +27,12 @@ const DetailsScreen: React.FC<Props> = () => {
 
   return (
     <View style={styles.detailContainer}>
-      <Text style={styles.boldText}>DetailsScreen</Text>
-      <TouchableOpacity onPress={onPressGoBack} style={styles.button}>
-        <Text>Go back</Text>
-      </TouchableOpacity>
+      <AppButton
+        preset="secondary"
+        onPress={onPressGoBack}
+        style={styles.button}>
+        <AppText preset="bold">Go back</AppText>
+      </AppButton>
     </View>
   );
 };
