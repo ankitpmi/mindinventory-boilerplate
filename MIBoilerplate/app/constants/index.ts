@@ -1,3 +1,4 @@
-import {palette} from './color';
+import {palette, getRandomColor} from './color';
 import constants from './constants';
-export {palette, constants};
+import commonStyles from './commonStyles';
+export {palette, constants, getRandomColor, commonStyles};

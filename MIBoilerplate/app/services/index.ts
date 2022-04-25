@@ -1,4 +1,4 @@
 import API from './api';
-import type {PostsRes} from './Models/PostsModel';
+import type {TodosRes} from './Models/PostsModel';
 
-export {API, PostsRes};
+export {API, TodosRes};

@@ -27,7 +27,6 @@ const DetailsScreen: React.FC<Props> = () => {
 
   return (
     <View style={styles.detailContainer}>
-      <AppText preset="header">DetailsScreen</AppText>
       <AppButton
         preset="secondary"
         onPress={onPressGoBack}

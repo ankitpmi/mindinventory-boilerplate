@@ -1,8 +1,8 @@
 import {useState, useEffect} from 'react';
-import {API, PostsRes} from 'app-services';
+import {API, TodosRes} from 'app-services';
 
 export const useHomeScreen = () => {
-  const [postData, setPostData] = useState<PostsRes[] | []>([]);
+  const [todoData, setTodoData] = useState<TodosRes[] | []>([]);
 
   useEffect(() => {
     getAllPosts();
@@ -10,9 +10,9 @@ export const useHomeScreen = () => {
 
   const getAllPosts = async () => {
     try {
-      const getAllPostsRes = await API.getAllPosts();
-      console.log('getAllPostsRes >>> ', getAllPostsRes);
-      setPostData(getAllPostsRes);
+      const getAllTodosRes = await API.getAllTodos();
+      console.log('getAllTodosRes >>> ', getAllTodosRes);
+      setTodoData(getAllTodosRes);
     } catch (error) {
       console.log('E2 >>> ', error);
 
@@ -21,6 +21,6 @@ export const useHomeScreen = () => {
   };
 
   return {
-    postData,
+    todoData,
   };
 };
