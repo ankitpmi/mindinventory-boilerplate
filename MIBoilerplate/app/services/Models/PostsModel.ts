@@ -5,4 +5,5 @@ export interface TodosRes {
   id: number;
   title: string;
   completed: boolean;
+  backgroundColor?: string;
 }
