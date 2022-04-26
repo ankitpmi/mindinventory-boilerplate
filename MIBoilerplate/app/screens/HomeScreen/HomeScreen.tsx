@@ -8,7 +8,6 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import styles from './styles';
 import {useHomeScreen} from './useHomeScreen';
 import {TodosRes} from 'app-services';
-import {getRandomColor} from 'app-constants';
 
 export type HomeScreenNavigationProps = NativeStackNavigationProp<
   RootStackParams,
@@ -30,7 +29,7 @@ const HomeScreen: React.FC<Props> = () => {
   const renderTodoList = ({item}: {item: TodosRes}): JSX.Element => {
     return (
       <TouchableOpacity
-        style={[styles.cardLayout, {backgroundColor: getRandomColor()}]}
+        style={[styles.cardLayout, {backgroundColor: item.backgroundColor}]}
         key={item.id}
         onPress={onPressButton}>
         <AppText preset="bold" style={styles.cardText}>
