@@ -2,6 +2,7 @@ import {StyleSheet} from 'react-native';
 import {palette} from 'app-constants';
 import {constants} from 'app-constants';
 
+const {IS_ANDROID} = constants;
 const cardWidth = constants.DEVICE_WIDTH / 2 - 20;
 
 const styles = StyleSheet.create({
@@ -65,10 +66,10 @@ const styles = StyleSheet.create({
     shadowColor: palette.black,
     shadowOffset: {
       width: 0,
-      height: 2,
+      height: IS_ANDROID ? 2 : 4,
     },
     shadowOpacity: 0.25,
-    shadowRadius: 3.84,
+    shadowRadius: IS_ANDROID ? 3.84 : 14.5,
 
     elevation: 5,
   },
