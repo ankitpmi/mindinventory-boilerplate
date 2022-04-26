@@ -2,8 +2,8 @@ import React from 'react';
 import {View, Image, FlatList, TouchableOpacity} from 'react-native';
 import {miLogoImg} from 'app-assets';
 import {AppText} from 'app-components';
-import {RootStackParams, RouteNames} from 'app-navigation';
-import {RouteProp, useNavigation} from '@react-navigation/native';
+import {RootStackParams} from 'app-navigation';
+import {RouteProp} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import styles from './styles';
 import {useHomeScreen} from './useHomeScreen';
@@ -19,19 +19,14 @@ export type HomeScreenRouteProps = RouteProp<RootStackParams, 'HomeScreen'>;
 interface Props {}
 
 const HomeScreen: React.FC<Props> = () => {
-  const navigation = useNavigation<HomeScreenNavigationProps>();
-
-  const onPressButton = () => {
-    navigation.navigate(RouteNames.DetailsScreen);
-  };
-  const {todoData} = useHomeScreen();
+  const {todoData, onPressCard} = useHomeScreen();
 
   const renderTodoList = ({item}: {item: TodosRes}): JSX.Element => {
     return (
       <TouchableOpacity
         style={[styles.cardLayout, {backgroundColor: item.backgroundColor}]}
         key={item.id}
-        onPress={onPressButton}>
+        onPress={onPressCard}>
         <AppText preset="bold" style={styles.cardText}>
           {item.title}
         </AppText>
