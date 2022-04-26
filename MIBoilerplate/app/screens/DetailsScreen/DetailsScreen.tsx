@@ -2,9 +2,10 @@ import React from 'react';
 import {View} from 'react-native';
 import {AppButton, AppText} from 'app-components';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {RouteProp, useNavigation} from '@react-navigation/native';
+import {RouteProp} from '@react-navigation/native';
 import type {RootStackParams} from 'app-navigation';
 import styles from './styles';
+import {useDetailsScreen} from './useDetailsScreen';
 
 export type DetailsScreenNavigationProps = NativeStackNavigationProp<
   RootStackParams,
@@ -19,11 +20,7 @@ export type DetailsScreenRouteProps = RouteProp<
 interface Props {}
 
 const DetailsScreen: React.FC<Props> = () => {
-  const navigation = useNavigation<DetailsScreenNavigationProps>();
-
-  const onPressGoBack = () => {
-    navigation.goBack();
-  };
+  const {onPressGoBack} = useDetailsScreen();
 
   return (
     <View style={styles.detailContainer}>
